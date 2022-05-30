@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UF3Practicav2">
+  <ClassDiagramComponents>
+    <Class name="Llibre" package="" visibility="public" xPosition="809.0" yPosition="783.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="tipus" type="Arraylist" visibility="private"/>
+        <Field name="editorial" type="String" visibility="private"/>
+        <Field name="any" type="int" visibility="private"/>
+        <Field name="autor" type="String" visibility="private"/>
+        <Field name="codi" type="String" visibility="private"/>
+        <Field name="estat" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Autor" package="" visibility="public" xPosition="502.0" yPosition="851.0">
+      <Fields>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="nacionalitat" type="String" visibility="private"/>
+        <Field name="dataNaixament" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Biblioteca" package="" visibility="public" xPosition="809.0" yPosition="593.0">
+      <Fields>
+        <Field name="llibres" type="Arraylist" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Lector" package="" visibility="public" xPosition="466.0" yPosition="568.0">
+      <Fields>
+        <Field name="dni" type="String" visibility="private"/>
+        <Field name="llibresPossesio" type="Arraylist" visibility="private"/>
+        <Field name="nom" type="String" visibility="private"/>
+        <Field name="limitLlibres" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Biblioteca" target="Llibre" sourceCardinality="1..*" targetCardinality="1..1"/>
+    <HasRelation name="compone" source="Autor" target="Llibre" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="." source="Lector" target="Biblioteca" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
